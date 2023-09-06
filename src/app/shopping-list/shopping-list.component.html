@@ -1,0 +1,14 @@
+<div class="row">
+   <div class="col-xs-10">
+      <app-shopping-edit (incridaientAdded)="onIngAdded($event)" (incridaientremove)="onRemoved($event)"
+         (incridaientClear)="onCleared($event)"></app-shopping-edit>
+      <hr>
+      <div class="list-group">
+         <ng-container>
+            <a href="#" class="list-group-item" style="cursor: pointer;" *ngFor="let item of ingredients">
+               <span (click)="onRemovedTap()">{{item.name}} ({{item.amount}})</span>
+            </a>
+         </ng-container>
+      </div>
+   </div>
+</div>

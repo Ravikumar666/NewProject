@@ -1,2 +1,10 @@
-<h1>tt</h1>
-<input type="text" class="form-control w-50 m-2" placeholder="Text">
+<app-header (futureLoaded)="onNavigative($event)"></app-header>
+
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <app-recipes *ngIf="loadedFuture === 'recipes'"></app-recipes>
+         <app-shopping-list *ngIf="loadedFuture != 'recipes'"></app-shopping-list>
+      </div>
+   </div>
+</div>
